@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>XLR8</title>
+  <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body class="mb-5">
+  <div class="container mt-4">
+    <h2 class="text-center mb-4">
+      XLR8
+      <img src="images/lightswitch.png" alt="LightSwitch" onclick="toggleTheme()" class="float-right cursor-pointer">
+    </h2>
+    <div class="toolbar mb-3 d-flex justify-content-center flex-wrap">
+      <input type="text" id="searchInput" class="form-control m-1 placeholder-center" placeholder="Search value..."
+        style="max-width: 200px" />
+      <button class="btn btn-outline-primary m-1" onclick="searchTable()">
+        Search
+      </button>
+      <button class="btn btn-primary m-1" onclick="exportCSV()">
+        Export CSV
+      </button>
+      <hr class="w-100" />
+      <button class="btn btn-success m-1" onclick="addRow()">Add Row</button>
+      <button class="btn btn-info m-1" onclick="addRowAbove()">
+        Add Row Above
+      </button>
+      <button class="btn btn-info m-1" onclick="addRowBelow()">
+        Add Row Below
+      </button>
+      <button class="btn btn-danger m-1" onclick="deleteRow()">
+        Delete Row
+      </button>
+      <hr class="w-100" />
+      <button class="btn btn-secondary m-1" onclick="addColumn()">
+        Add Column
+      </button>
+      <button class="btn btn-secondary m-1" onclick="deleteColumn()">
+        Delete Column
+      </button>
+      <input type="color" id="colorPicker" class="form-control m-1" style="width: auto" title="Adjust Color" />
+      <button class="btn btn-warning m-1" onclick="colorRow()">
+        Color Row
+      </button>
+      <button class="btn btn-warning m-1" onclick="colorColumn()">
+        Color Column
+      </button>
+      <!-- <hr class="w-100">
+      <input type="file" class="form-control-file m-1" onchange="importCSV(event)" /> -->
+    </div>
+    <table class="table table-bordered text-center spreadsheet mt-5" id="spreadsheet">
+      <thead>
+        <tr>
+          <td contenteditable="true">Name</td>
+          <td contenteditable="true">JAMB Number</td>
+          <td contenteditable="true">Email</td>
+          <td contenteditable="true">CGPA</td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td contenteditable="true">John Doe</td>
+          <td contenteditable="true">10023729AB</td>
+          <td contenteditable="true">johndoe@gmail.com</td>
+          <td contenteditable="true">4.35</td>
+        </tr>
+        <tr>
+          <td contenteditable="true">Jane Doe</td>
+          <td contenteditable="true">10087234CD</td>
+          <td contenteditable="true">janedoe@gmail.com</td>
+          <td contenteditable="true">4.26</td>
+        </tr>
+        <tr>
+          <td contenteditable="true">Chris Rich</td>
+          <td contenteditable="true">10027468EF</td>
+          <td contenteditable="true">chrisrich@gmail.com</td>
+          <td contenteditable="true">4.64</td>
+        </tr>
+      </tbody>
+    </table>
+    <div id="statusBar" class="mt-2 text-muted font-italic">Selected Cell: None</div>
+  </div>
+  <script src="jquery/jquery.slim.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+
+</html>

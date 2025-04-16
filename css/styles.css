@@ -1,0 +1,54 @@
+body {
+    background-color: #f8f9fa;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+thead > tr > td {
+    font-weight: bold;
+}
+
+td:hover {
+    transform: scale(1.01);
+    font-style: italic;
+    color: azure;
+    background-color: darkslategray;
+    border-radius: .5rem;
+}
+
+h2 {
+    color: #1d6f42;
+    font-style: italic;
+    font-size: 2rem;
+}
+
+img {
+    width: .75rem;
+    height: .75rem;
+    transform: scale(2.5);
+}
+
+table.spreadsheet td {
+    min-width: 100px;
+    height: 40px;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+.dark-mode {
+    background-color: #343a40 !important;
+    color: #f8f9fa !important;
+}
+
+.dark-mode table {
+    color: #f8f9fa;
+}
+
+.dark-mode td {
+    background-color: #495057;
+}
+
+input,
+input::placeholder {
+    text-align: center;
+    font-style: italic;
+}
